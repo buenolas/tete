@@ -1,0 +1,119 @@
+/* Importa uma fonte fofa do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Pacifico&display=swap');
+
+:root {
+    --rosa-claro: #ffe0ec;
+    --rosa: #ffb6d5;
+    --vermelho: #ff6f91;
+    --branco: #fff;
+    --cinza: #f7f7f7;
+    --sombra: 0 4px 24px 0 rgba(255, 182, 213, 0.2);
+}
+
+body {
+    background: linear-gradient(135deg, var(--rosa-claro) 0%, var(--cinza) 100%);
+    font-family: 'Quicksand', Arial, sans-serif;
+    color: #4d2c3d;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    color: var(--vermelho);
+    text-align: center;
+    margin: 32px 16px 24px 16px;
+    text-shadow: 1px 2px 8px #fff6;
+}
+
+h3 {
+    background: var(--rosa);
+    color: #4d2c3d;
+    border-radius: 18px;
+    padding: 18px 22px;
+    margin: 18px auto 32px auto;
+    max-width: 600px;
+    box-shadow: var(--sombra);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+img, video {
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 22px;
+    box-shadow: 0 2px 16px 0 #ffb6d555;
+    max-width: 95vw;
+    max-height: 60vh;
+    background: var(--branco);
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+img:hover, video:hover {
+    transform: scale(1.03) rotate(-2deg);
+    box-shadow: 0 6px 32px 0 #ffb6d599;
+}
+
+video {
+    background: var(--rosa-claro);
+    margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+    h3, h1, h2 {
+        max-width: 95vw;
+        font-size: 1rem;
+    }
+    img, video {
+        max-width: 98vw;
+        max-height: 40vh;
+    }
+}
+
+@media (orientation: portrait) {
+    img, video {
+        max-width: 95vw;
+        max-height: 55vh;
+    }
+    h3, h1, h2 {
+        font-size: 1.05rem;
+    }
+}
+
+@media (orientation: landscape) {
+    img, video {
+        max-width: 60vw;
+        max-height: 60vh;
+    }
+    h3, h1, h2 {
+        font-size: 1.15rem;
+    }
+}
+
+/* Pequenos corações decorativos */
+body::before {
+    content: "❤";
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    font-size: 2.2rem;
+    color: var(--vermelho);
+    opacity: 0.25;
+    pointer-events: none;
+}
+body::after {
+    content: "❤";
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    font-size: 2.2rem;
+    color: var(--vermelho);
+    opacity: 0.25;
+    pointer-events: none;
+}
